@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== B站风格深色主题 ==================== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #18191c;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18191c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333640;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4d59;
+}
+
+/* 自定义工具类 */
+.card-bili {
+  background-color: #23252b;
+  border-radius: 12px;
+  border: 1px solid #333640;
+}
+
+.btn-bili-primary {
+  background-color: #fb7299;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-bili-primary:hover {
+  background-color: #ff85ad;
+}
+
+.btn-bili-secondary {
+  background-color: #2a2d36;
+  color: #9499a0;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #333640;
+  cursor: pointer;
+}
+
+.btn-bili-secondary:hover {
+  background-color: #333640;
+  color: #ffffff;
+}
+
+.text-bili-primary {
+  color: #fb7299;
+}
+
+.bg-bili-card {
+  background-color: #23252b;
+}
+
+.bg-bili-hover {
+  background-color: #2a2d36;
+}
+
+.border-bili {
+  border-color: #333640;
+}
+
+.text-bili-white {
+  color: #ffffff;
+}
+
+.text-bili-gray {
+  color: #9499a0;
+}
+
+.text-bili-light-gray {
+  color: #61666d;
+}
+
+/* 输入框样式 */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #333640;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fb7299;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(251, 114, 153, 0.5);
+}
+
+/* select 样式 */
+select {
+  background-color: #2a2d36;
+  color: #ffffff;
+  border: 1px solid #333640;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239499a0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+select:hover {
+  border-color: #fb7299;
+}
+
+select:focus {
+  border-color: #fb7299;
+  box-shadow: 0 0 0 2px rgba(251, 114, 153, 0.2);
+}

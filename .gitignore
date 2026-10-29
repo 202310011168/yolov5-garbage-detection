@@ -1,0 +1,79 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- 模型权重与训练产物 ----------
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+runs/
+weights/
+dataset_yolo/
+yolo_dataset/
+garbage_dataset/images/
+garbage_dataset/labels/
+
+# ---------- 数据集与媒体 ----------
+*.mp4
+*.avi
+*.mov
+*.mkv
+!docs/**/*.mp4
+garbage_dataset/*.zip
+
+# ---------- 上传的临时文件 ----------
+ui界面/backend/uploads/*
+!ui界面/backend/uploads/.gitkeep
+.uploads/
+
+# ---------- Node / 前端构建产物 ----------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 日志与临时文件 ----------
+*.log
+*.tmp
+*.bak
+~$*
+
+# ---------- 环境变量 / 密钥 ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key

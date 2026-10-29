@@ -1,0 +1,21 @@
+# YOLO 数据集配置文件
+# 自动生成于 setup_yolo_dataset.py
+# 划分比例: 训练集 80% | 验证集 10% | 测试集 10%
+
+# 数据集根目录：请改为你本机的数据集路径（相对本文件或绝对路径均可）
+# 目录下需包含 images/{train,val,test} 和 labels/{train,val,test}
+path: .
+train: images/train
+val: images/val
+test: images/test
+
+# 类别数量
+nc: 5
+
+# 类别名称
+names:
+  0: cardboard
+  1: glass
+  2: metal
+  3: paper
+  4: plastic

@@ -1,0 +1,55 @@
+- batch_size: 16
+  best_weights: ./runs/detect/runs/train/exp1_yolov5s_bs16-2/weights/best.pt
+  epochs: 100
+  exp_name: exp1_yolov5s_bs16
+  mAP50: !!python/object/apply:numpy._core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    jTJbbfgA7z8=
+  mAP50_95: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    qgVZr6cP6z8=
+  model: yolov5s
+  precision: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    qKseDURq7j8=
+  recall: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    2rmOomzO7D8=
+- batch_size: 8
+  best_weights: ./runs/detect/runs/train/exp2_yolov5m_bs8/weights/best.pt
+  epochs: 100
+  exp_name: exp2_yolov5m_bs8
+  mAP50: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    OJ7t0ljV7j8=
+  mAP50_95: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    3NaRS4JB6z8=
+  model: yolov5m
+  precision: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    FY2LOAhF7T8=
+  recall: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    49ogsewT7T8=
