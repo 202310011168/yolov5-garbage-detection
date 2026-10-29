@@ -62,6 +62,8 @@ yolov5-garbage-detection/
 ├── garbage.yaml                 # 数据集配置（训练用）
 ├── garbage_detection_ui_v2.py   # 桌面端主程序
 ├── start_UI.bat                 # 桌面端启动脚本
+├── docs/
+│   └── images/                  # README 效果图
 ├── documents/
 │   ├── PRD-垃圾分类检测系统.md   # 产品需求文档
 │   └── TECH-垃圾分类检测系统.md  # 技术架构文档
@@ -106,9 +108,18 @@ pip install -r requirements.txt
 python check_env.py
 ```
 
-### 2. 准备模型权重（未随仓库上传）
+### 2. 下载模型权重
 
-仓库不包含 `.pt` 权重文件。请通过本仓库的训练脚本自行训练，或联系作者获取，并按以下路径放置：
+训练好的权重已发布在 [Releases](https://github.com/202310011168/yolov5-garbage-detection/releases)：
+
+| 文件 | 模型 | 大小 | 放置位置 |
+| --- | --- | --- | --- |
+| `yolov5n-best.pt` | YOLOv5n | 5.1 MB | `runs/detect/runs/train/exp3_yolov5n_bs32/weights/best.pt` |
+| `yolov5s-best.pt` | YOLOv5s | 18 MB | `runs/detect/runs/train/exp1_yolov5s_bs16-2/weights/best.pt` |
+| `yolov5m-best.pt` | YOLOv5m | 49 MB | `runs/detect/runs/train/exp2_yolov5m_bs8/weights/best.pt` |
+| `yolov5su.pt` | COCO 预训练模型 | 18 MB | 项目根目录 `yolov5su.pt` |
+
+也可以直接下载 `garbage-weights.zip`，解压到项目根目录即可得到完整目录结构：
 
 ```text
 <项目根目录>/
@@ -215,6 +226,26 @@ python detect.py <图片或目录>
 
 > 指标取自各实验 `results.csv` 的最后一个 epoch。YOLOv5m 精度略高但速度较慢，YOLOv5n 体积最小、速度最快，YOLOv5s 综合表现最均衡。
 
+## 效果展示
+
+### 训练过程
+
+![训练曲线](docs/images/training-curves.png)
+
+### 混淆矩阵（归一化）
+
+![混淆矩阵](docs/images/confusion-matrix.png)
+
+### PR 曲线
+
+![PR 曲线](docs/images/pr-curve.png)
+
+### 验证集检测效果
+
+| 真实标注 | 模型预测 |
+| --- | --- |
+| ![真实标注](docs/images/val-labels.jpg) | ![模型预测](docs/images/val-predictions.jpg) |
+
 ## API 接口
 
 | 接口 | 方法 | 说明 |
@@ -236,7 +267,7 @@ python detect.py <图片或目录>
 
 ## 说明
 
-- 本仓库仅包含**源代码与文档**。模型权重、数据集、训练产物（`runs/`）、前端依赖与构建产物（`node_modules/`、`dist/`）均已通过 `.gitignore` 排除。
+- 本仓库包含源代码、文档与实验结果图；数据集体积较大未上传。模型权重请从 [Releases](https://github.com/202310011168/yolov5-garbage-detection/releases) 下载，其余训练产物（`runs/`）、前端依赖与构建产物（`node_modules/`、`dist/`）已通过 `.gitignore` 排除。
 - 仓库中所有本机绝对路径与用户名已做脱敏/相对化处理；如训练或部署时路径不一致，请按上述说明修改配置。
 - 本项目为课程设计作品，仅供学习与交流使用。
 
